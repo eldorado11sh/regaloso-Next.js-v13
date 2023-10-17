@@ -1,0 +1,60 @@
+// curl --location 'http://localhost:8000/api/v1/gift'
+
+[
+    {
+        "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+        "title": "I Will Fear No Evil",
+        "description": "Arclight",
+        "status": "ASSIGNED",
+        "createdAt": "2023-10-08T21:52:55.413+00:00",
+        "updateAt": "2023-10-08T21:52:55.413+00:00"
+    },
+    {
+        "id": "1d427f65-e66d-46ad-bae5-006e91916d3c",
+        "title": "In a Glass Darkly",
+        "description": "Scorpia",
+        "status": "RECEIVED",
+        "createdAt": "2023-10-08T21:52:56.154+00:00",
+        "updateAt": "2023-10-08T21:52:56.154+00:00"
+    },
+    {
+        "id": "3cc4d171-3cf0-4651-9788-483fa9e47869",
+        "title": "No Longer at Ease",
+        "description": "Maverick",
+        "status": "RECEIVED",
+        "createdAt": "2023-10-08T21:52:56.541+00:00",
+        "updateAt": "2023-10-08T21:52:56.541+00:00"
+    },
+    {
+        "id": "1f2b47ad-ffe4-4488-afca-a091f200670c",
+        "title": "The Doors of Perception",
+        "description": "Firestar",
+        "status": "DELETED",
+        "createdAt": "2023-10-08T21:52:56.734+00:00",
+        "updateAt": "2023-10-08T21:52:56.734+00:00"
+    },
+    {
+        "id": "a5aa83ad-7534-49d3-a8c2-6b8b409db9db",
+        "title": "Fair Stood the Wind for France",
+        "description": "Mandarin",
+        "status": "DELETED",
+        "createdAt": "2023-10-08T21:52:57.300+00:00",
+        "updateAt": "2023-10-08T21:52:57.300+00:00"
+    },
+    {
+        "id": "e4a78f54-4f04-4413-b05c-ece74efce132",
+        "title": "The Soldier's Art",
+        "description": "Destroyer",
+        "status": "DELETED",
+        "createdAt": "2023-10-08T21:52:57.857+00:00",
+        "updateAt": "2023-10-08T21:52:57.857+00:00"
+    },
+    {
+        "id": "592bb98f-4ec4-4998-8b95-abe2fc42ddcd",
+        "title": "Look Homeward, Angel",
+        "description": "Granny Goodness",
+        "status": "RECEIVED",
+        "createdAt": "2023-10-08T21:52:58.739+00:00",
+        "updateAt": "2023-10-08T21:52:58.739+00:00"
+    }
+]

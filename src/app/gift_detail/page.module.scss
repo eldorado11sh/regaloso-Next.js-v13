@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1483px;
+  margin: auto;
+  margin-top: 275px;
+  gap: 187px;
+}
+
+.silderMain {
+  display: flex;
+  flex-direction: column;
+  max-width: 1483px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1503px) {
+  .main {
+    margin-top: 235px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main {
+    margin-top: 0px;
+    gap: 60px;
+  }
+  .detail-part {
+    flex-direction: column;
+    align-items: center;
+    gap: 110px;
+  }
+  .detail-left {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .line {
+    height: 1px;
+    width: 100px;
+    margin: 30px 0px;
+  }
+  .userMark {
+    font-size: 25px;
+    padding: 8px 18px;
+  }
+}
+

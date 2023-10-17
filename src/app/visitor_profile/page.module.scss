@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1483px;
+  margin: auto;
+  margin-top: 275px;
+  color: #363636;
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1503px) {
+  .main {
+    margin-top: 235px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .profile {
+    width: 100%;
+  }
+  .product {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .userMark {
+    font-size: 25px;
+    padding: 8px 18px;
+  }
+  .profile {
+    gap: 12px;
+    padding: 17px 25px 30px 25px;
+  }
+}
+

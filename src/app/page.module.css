@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1483px;
+  margin: auto;
+  margin-top: 275px;
+}
+
+@media only screen and (max-width: 1503px) {
+  .main {
+    margin-top: 235px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main {
+    margin-top: 0px;
+  }
+}

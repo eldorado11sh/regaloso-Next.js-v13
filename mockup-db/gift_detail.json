@@ -1,0 +1,15 @@
+// curl --location 'http://localhost:8000/api/v1/gift/f7095f32-f91c-413a-b181-781ed0a53712/detail'
+
+{
+    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+    "title": "Cuffie Wireless",
+    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+    "status": true,
+    "favourite": false, 
+    "image": "require('../../assets/CuffieWireless.png')",
+    "background": false,
+    "gender": "Giovanni", 
+    "location": "Roma", 
+    "createdAt": "2023-10-08T21:52:55.413+00:00",
+    "updateAt": "2023-10-08T21:52:55.413+00:00"
+}

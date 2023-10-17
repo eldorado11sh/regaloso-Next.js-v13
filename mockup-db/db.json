@@ -1,0 +1,380 @@
+{
+    "gifts" : [
+        {
+            "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "title": "Cuffie Wireless",
+            "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+            "status": true,
+            "favourite": false, 
+            "image": "require('../../assets/CuffieWireless.png')",
+            "background": false,
+            "createdAt": "2023-10-08T21:52:55.413+00:00",
+            "updateAt": "2023-10-08T21:52:55.413+00:00"
+        },
+        {
+            "id": "1d427f65-e66d-46ad-bae5-006e91916d3c",
+            "title": "Smartwatch",
+            "description": "Regalo smartwatch usato ma perfettamente funzionante",
+            "status": false,
+            "favourite": true, 
+            "image": "require('../../assets/Smartwatch.png')",
+            "background": false,
+            "createdAt": "2023-10-08T21:52:55.413+00:00",
+            "updateAt": "2023-10-08T21:52:55.413+00:00"
+        }, 
+        {
+            "id": "3cc4d171-3cf0-4651-9788-483fa9e47869",
+            "title": "No Longer at Ease",
+            "description": "Maverick",
+            "status": "RECEIVED",
+            "createdAt": "2023-10-08T21:52:56.541+00:00",
+            "updateAt": "2023-10-08T21:52:56.541+00:00"
+        },
+        {
+            "id": "1f2b47ad-ffe4-4488-afca-a091f200670c",
+            "title": "The Doors of Perception",
+            "description": "Firestar",
+            "status": "DELETED",
+            "createdAt": "2023-10-08T21:52:56.734+00:00",
+            "updateAt": "2023-10-08T21:52:56.734+00:00"
+        },
+        {
+            "id": "a5aa83ad-7534-49d3-a8c2-6b8b409db9db",
+            "title": "Fair Stood the Wind for France",
+            "description": "Mandarin",
+            "status": "DELETED",
+            "createdAt": "2023-10-08T21:52:57.300+00:00",
+            "updateAt": "2023-10-08T21:52:57.300+00:00"
+        },
+        {
+            "id": "e4a78f54-4f04-4413-b05c-ece74efce132",
+            "title": "The Soldier's Art",
+            "description": "Destroyer",
+            "status": "DELETED",
+            "createdAt": "2023-10-08T21:52:57.857+00:00",
+            "updateAt": "2023-10-08T21:52:57.857+00:00"
+        },
+        {
+            "id": "592bb98f-4ec4-4998-8b95-abe2fc42ddcd",
+            "title": "Look Homeward, Angel",
+            "description": "Granny Goodness",
+            "status": "RECEIVED",
+            "createdAt": "2023-10-08T21:52:58.739+00:00",
+            "updateAt": "2023-10-08T21:52:58.739+00:00"
+        }
+    ],
+    "gift_winner" : [
+        {
+            "id": "e03e1d2c-7cd3-4dfb-a00a-5d5007d79a1d",
+            "user": {
+                "id": "140c4332-09a2-403c-b1ce-fc40412e4ce8",
+                "firstname": "Sim",
+                "lastname": "Cummerata",
+                "email": "filomena.fadel@hotmail.com",
+                "password": null,
+                "dateOfBirth": "13/01/1995",
+                "sex": "MAN",
+                "city": "South Jovanistad",
+                "subscriptionCredit": {
+                    "id": "7fc8c6cc-9543-4f54-ab1e-e9a7725da277",
+                    "balance": 9.00,
+                    "createdAt": "2023-10-08T21:52:56.008+00:00",
+                    "updateAt": "2023-10-08T21:52:56.008+00:00"
+                },
+                "createdAt": "2023-10-08T21:52:56.008+00:00",
+                "updateAt": "2023-10-08T21:52:56.008+00:00"
+            },
+            "gift": {
+                "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                "title": "I Will Fear No Evil",
+                "description": "Arclight",
+                "status": "ASSIGNED",
+                "createdAt": "2023-10-08T21:52:55.413+00:00",
+                "updateAt": "2023-10-08T21:52:55.413+00:00"
+            },
+            "createdAt": "2023-10-08T21:52:56.151+00:00",
+            "updateAt": "2023-10-08T21:52:56.151+00:00"
+        }
+    ],
+    "gift_subscribers" : [
+        {
+            "id": "072f5dd0-058f-49f5-b933-2dfc12380a7e",
+            "user": {
+                "id": "2ce45194-0fcf-4327-b1b3-30cdca7035fc",
+                "firstname": "Parker",
+                "lastname": "Fadel",
+                "email": "eldon.schmitt@gmail.com",
+                "password": null,
+                "dateOfBirth": "30/03/1987",
+                "sex": "MAN",
+                "city": "Port Florianside",
+                "subscriptionCredit": {
+                    "id": "cd1a03ba-c21f-446e-8144-7dbaa5f5a54f",
+                    "balance": 9.00,
+                    "createdAt": "2023-10-08T21:52:55.554+00:00",
+                    "updateAt": "2023-10-08T21:52:55.554+00:00"
+                },
+                "createdAt": "2023-10-08T21:52:55.554+00:00",
+                "updateAt": "2023-10-08T21:52:55.554+00:00"
+            },
+            "gift": {
+                "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                "title": "I Will Fear No Evil",
+                "description": "Arclight",
+                "status": "ASSIGNED",
+                "createdAt": "2023-10-08T21:52:55.413+00:00",
+                "updateAt": "2023-10-08T21:52:55.413+00:00"
+            },
+            "createdAt": "2023-10-08T21:52:55.556+00:00",
+            "updateAt": "2023-10-08T21:52:55.556+00:00"
+        },
+        {
+            "id": "e16b9385-7b68-4cac-a09c-b02c25aef0b8",
+            "user": {
+                "id": "3553e64f-98e2-41e7-9de1-125b201f60db",
+                "firstname": "Zella",
+                "lastname": "Harvey",
+                "email": "sienna.hermiston@gmail.com",
+                "password": null,
+                "dateOfBirth": "10/11/1969",
+                "sex": "MAN",
+                "city": "Port Berniecefurt",
+                "subscriptionCredit": {
+                    "id": "16f84d13-06c9-4f2e-b152-47a277de0d2d",
+                    "balance": 9.00,
+                    "createdAt": "2023-10-08T21:52:55.692+00:00",
+                    "updateAt": "2023-10-08T21:52:55.692+00:00"
+                },
+                "createdAt": "2023-10-08T21:52:55.692+00:00",
+                "updateAt": "2023-10-08T21:52:55.692+00:00"
+            },
+            "gift": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "createdAt": "2023-10-08T21:52:55.695+00:00",
+            "updateAt": "2023-10-08T21:52:55.695+00:00"
+        },
+        {
+            "id": "055a3189-464c-4101-801d-225f57362a71",
+            "user": {
+                "id": "dba2b941-fc69-45c4-950d-226be0646687",
+                "firstname": "Glenna",
+                "lastname": "Rutherford",
+                "email": "nichole.schowalter@gmail.com",
+                "password": null,
+                "dateOfBirth": "30/04/2005",
+                "sex": "WOMEN",
+                "city": "West Victoriashire",
+                "subscriptionCredit": {
+                    "id": "087564e9-2ccc-4988-b1f1-398a0ffc68f2",
+                    "balance": 9.00,
+                    "createdAt": "2023-10-08T21:52:55.810+00:00",
+                    "updateAt": "2023-10-08T21:52:55.810+00:00"
+                },
+                "createdAt": "2023-10-08T21:52:55.810+00:00",
+                "updateAt": "2023-10-08T21:52:55.810+00:00"
+            },
+            "gift": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "createdAt": "2023-10-08T21:52:55.812+00:00",
+            "updateAt": "2023-10-08T21:52:55.812+00:00"
+        },
+        {
+            "id": "ea379052-ff13-448d-924f-7851e743752a",
+            "user": {
+                "id": "80aa0260-9a87-4e39-819b-7c556a1877cb",
+                "firstname": "Kade",
+                "lastname": "Marquardt",
+                "email": "joanny.collins@gmail.com",
+                "password": null,
+                "dateOfBirth": "19/01/1961",
+                "sex": "MAN",
+                "city": "Baileyside",
+                "subscriptionCredit": {
+                    "id": "06caf91f-c65b-45e1-8ef1-3bc55cce696b",
+                    "balance": 9.00,
+                    "createdAt": "2023-10-08T21:52:55.909+00:00",
+                    "updateAt": "2023-10-08T21:52:55.909+00:00"
+                },
+                "createdAt": "2023-10-08T21:52:55.909+00:00",
+                "updateAt": "2023-10-08T21:52:55.909+00:00"
+            },
+            "gift": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "createdAt": "2023-10-08T21:52:55.912+00:00",
+            "updateAt": "2023-10-08T21:52:55.912+00:00"
+        },
+        {
+            "id": "43b6f286-c501-45fa-bd20-1d0ec9337a1a",
+            "user": {
+                "id": "140c4332-09a2-403c-b1ce-fc40412e4ce8",
+                "firstname": "Sim",
+                "lastname": "Cummerata",
+                "email": "filomena.fadel@hotmail.com",
+                "password": null,
+                "dateOfBirth": "13/01/1995",
+                "sex": "MAN",
+                "city": "South Jovanistad",
+                "subscriptionCredit": {
+                    "id": "7fc8c6cc-9543-4f54-ab1e-e9a7725da277",
+                    "balance": 9.00,
+                    "createdAt": "2023-10-08T21:52:56.008+00:00",
+                    "updateAt": "2023-10-08T21:52:56.008+00:00"
+                },
+                "createdAt": "2023-10-08T21:52:56.008+00:00",
+                "updateAt": "2023-10-08T21:52:56.008+00:00"
+            },
+            "gift": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "createdAt": "2023-10-08T21:52:56.011+00:00",
+            "updateAt": "2023-10-08T21:52:56.011+00:00"
+        },
+        {
+            "id": "57f394c5-f6f8-4ed2-811e-2d48a427f0ef",
+            "user": {
+                "id": "0e61362f-3857-4d1f-9f5f-8c00b05f6b33",
+                "firstname": "Mariano",
+                "lastname": "Von",
+                "email": "tania.greenfelder@yahoo.com",
+                "password": null,
+                "dateOfBirth": "16/02/1997",
+                "sex": "WOMEN",
+                "city": "Lehnerside",
+                "subscriptionCredit": {
+                    "id": "1a0075f4-69f0-4b43-82d0-7bfa0507464e",
+                    "balance": 9.00,
+                    "createdAt": "2023-10-08T21:52:56.101+00:00",
+                    "updateAt": "2023-10-08T21:52:56.101+00:00"
+                },
+                "createdAt": "2023-10-08T21:52:56.101+00:00",
+                "updateAt": "2023-10-08T21:52:56.101+00:00"
+            },
+            "gift": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "createdAt": "2023-10-08T21:52:56.104+00:00",
+            "updateAt": "2023-10-08T21:52:56.104+00:00"
+        }
+    ],
+    "gift_detail" : [
+        {
+            "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "title": "Cuffie Wireless",
+            "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+            "status": true,
+            "favourite": false, 
+            "image": "require('../../assets/CuffieWireless.png')",
+            "background": false,
+            "createdAt": "2023-10-08T21:52:55.413+00:00",
+            "updateAt": "2023-10-08T21:52:55.413+00:00"
+        }
+    ],
+    "gift_assigned" : [
+        {
+            "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "title": "I Will Fear No Evil",
+            "description": "Arclight",
+            "status": "ASSIGNED",
+            "createdAt": "2023-10-08T21:52:55.413+00:00",
+            "updateAt": "2023-10-08T21:52:55.413+00:00"
+        }
+    ], 
+    "currentUser": [
+        {
+            "id": "055a3189-464c-4101-801d-225f57362a712",
+            "firstname": "Giovanni", 
+            "lastname": "Sanna", 
+            "email": "giovanni.harvey@hotmail.com", 
+            "password": null,
+            "dateOfBirth": "13/01/1995",
+            "sex": "MAN",
+            "city": "Port Berniecefurt", 
+            "location": "Roma", 
+            "gifts": [
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "1d427f65-e66d-46ad-bae5-006e91916d3c",
+                    "title": "Custodia airpod seconda generazione",
+                    "description": "Regalo custodia airpods perfettamente funzionante",
+                    "status": false,
+                    "favourite": true, 
+                    "image": "'../../assets/Custopia.png'",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "1d427f65-e66d-46ad-bae5-006e91916d3c",
+                    "title": "Custodia airpod seconda generazione",
+                    "description": "Regalo custodia airpods perfettamente funzionante ",
+                    "status": false,
+                    "favourite": true, 
+                    "image": "../../assets/Custopia.png",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }
+            ], 
+            "favorite": [
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }
+            ]
+        }
+    ]
+}

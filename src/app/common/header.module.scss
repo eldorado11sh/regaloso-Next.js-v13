@@ -1,0 +1,102 @@
+.desktopHeader {
+    position: fixed;
+    top: calc(100vw / 100);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+    @media only screen and (max-width: 991px) {
+        display: none;
+    }
+
+    .headerContainer {
+        background-color: #fff;
+        box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        padding: 42px 50px;
+    
+        .headerWrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+            .logo {
+                color: #0ACF83;
+                font-size: 45px;
+                line-height: 54px;
+                font-weight: 700;
+            }
+            
+            .authWrapper {
+                display: flex;
+    
+            }
+        }
+    }
+}
+
+.mobileHeader {
+    @media only screen and (min-width: 992px) {
+        display: none;
+    }
+
+    .headerContainer {
+        .headerWrapper {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                color: #0ACF83;
+                font-size: 29px;
+                line-height: 29px;
+                font-weight: 700;
+            }
+
+            .number {
+                color: #fff;
+                font-size: 12px;
+                line-height: 25px;
+                border-radius: 50%;
+                background-color: #0ACF83;
+                width: 26px;
+                height: 26px;
+                text-align: center;
+            }
+
+            .bell {
+                border-radius: 50%;
+                background-color: #F3F3F3;
+                width: 26px;
+                height: 26px;
+                color: #0ACF83;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 12px;
+            }
+
+            .quickSearch {
+                border-radius: 50%;
+                background-color: #F3F3F3;
+                width: 26px;
+                height: 26px;
+                color: #0ACF83;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 12px;
+            }
+
+            .menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 12px;
+            }
+        }
+    }
+}

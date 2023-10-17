@@ -1,0 +1,11 @@
+// curl --location 'http://localhost:8000/api/v1/gift/ASSIGNED'
+[
+    {
+        "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+        "title": "I Will Fear No Evil",
+        "description": "Arclight",
+        "status": "ASSIGNED",
+        "createdAt": "2023-10-08T21:52:55.413+00:00",
+        "updateAt": "2023-10-08T21:52:55.413+00:00"
+    }
+]

@@ -1,0 +1,35 @@
+// curl --location 'http://localhost:8000/api/v1/gift/f7095f32-f91c-413a-b181-781ed0a53712/winner'
+
+[
+    {
+        "id": "e03e1d2c-7cd3-4dfb-a00a-5d5007d79a1d",
+        "user": {
+            "id": "140c4332-09a2-403c-b1ce-fc40412e4ce8",
+            "firstname": "Sim",
+            "lastname": "Cummerata",
+            "email": "filomena.fadel@hotmail.com",
+            "password": null,
+            "dateOfBirth": "13/01/1995",
+            "sex": "MAN",
+            "city": "South Jovanistad",
+            "subscriptionCredit": {
+                "id": "7fc8c6cc-9543-4f54-ab1e-e9a7725da277",
+                "balance": 9.00,
+                "createdAt": "2023-10-08T21:52:56.008+00:00",
+                "updateAt": "2023-10-08T21:52:56.008+00:00"
+            },
+            "createdAt": "2023-10-08T21:52:56.008+00:00",
+            "updateAt": "2023-10-08T21:52:56.008+00:00"
+        },
+        "gift": {
+            "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+            "title": "I Will Fear No Evil",
+            "description": "Arclight",
+            "status": "ASSIGNED",
+            "createdAt": "2023-10-08T21:52:55.413+00:00",
+            "updateAt": "2023-10-08T21:52:55.413+00:00"
+        },
+        "createdAt": "2023-10-08T21:52:56.151+00:00",
+        "updateAt": "2023-10-08T21:52:56.151+00:00"
+    }
+]
