@@ -8,24 +8,167 @@ import Image from "next/image";
 import { AiFillHeart } from "react-icons/ai";
 import { IoGift } from "react-icons/io5";
 import GiftHeart from "../../assets/giftHeart.png";
-import { BiSolidUser } from "react-icons/bi";
-import { IoNotificationsSharp } from "react-icons/io5";
-import { IoLogOut } from "react-icons/io5";
-import { IoSettings } from "react-icons/io5";
+import { BiSolidUser, BiSolidUserCircle } from "react-icons/bi";
+import { IoLogOut, IoSettings, IoNotificationsSharp, IoNotifications, IoMailUnread, IoSend } from "react-icons/io5";
 import ItemWidthCard from '../components/itemWidthCard';
 import FavoriteCard from '../components/favoriteCard';
 import ShippingModal from '../components/shippingModal';
 import ProfileOption from '../components/profileOption';
-import UserMarkImg from "../../assets/userMark.png"
+import UserMarkImg from "../../assets/userMark.png";
+import { TEST_HOST } from '../../app/utils/constant';
+import DromMenuArrow from '../../assets/dropMenu_arrow.png'
+import { BsCheckCircleFill, BsPlusLg } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+import CheckedRadio from "../../assets/checkedRadio.png";
+import NormalRadio from "../../assets/normalRadio.png";
+import Advertisement from "../../assets/ads.png"
+import MyGiftItem from '../components/myGiftItem';
+import { AiOutlineLeft } from "react-icons/ai";
+import Popup from '../components/popup';
 
 export default function VisitorProfile() {
 
   const assignedCategories = ["Regali In Corso", "RegaliVinti", "Regali Scaduti"]
   const stages = ["Regalino", "Regaluccio", "Regalosetto", "Regaloso", "Regalosissimo"]
+  const options = [
+    {
+      title: "Completa Profilo", 
+      point: 10, 
+      status: true
+    }, 
+    {
+      title: "1 Regalo Aggiunto", 
+      point: 1, 
+      status: true
+    }, 
+    {
+      title: "5 Regali Aggiunti", 
+      point: 5, 
+      status: true
+    }, 
+    {
+      title: "10 Regali Aggiunti", 
+      point: 10, 
+      status: false
+    }, 
+    {
+      title: "20 Regali Aggiunti", 
+      point: 20, 
+      status: false
+    }, 
+    {
+      title: "50 Regali Aggiunti", 
+      point: 50, 
+      status: false
+    }, 
+    {
+      title: "100 Regali Aggiunti", 
+      point: 100, 
+      status: false
+    }, 
+    {
+      title: "Invita un amico", 
+      point: 5, 
+      status: false
+    }, 
+    {
+      title: "Email Verificata", 
+      point: 5, 
+      status: true
+    }, 
+  ]
+  const days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  const years = [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2025, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+  const sections = [
+    { gender: "Uomo", status: true }, 
+    { gender: "Donna", status: false }, 
+    { gender: "Altro", status: false }, 
+  ]
+  const notifications = [
+    {
+      id: 1, 
+      title: "Giovanni Sanna si è iscritto al tuo regalo", 
+      status: true
+    },
+    {
+      id: 2, 
+      title: "Eren Jager si è iscritto al tuo regalo", 
+      status: false
+    },
+    {
+      id: 3, 
+      title: "Il regalo Airposd a cui ti sei iscritto è scaduto", 
+      status: false
+    },
+    {
+      id: 4, 
+      title: "Il regalo Airposd a cui ti sei iscritto è scaduto", 
+      status: false
+    },
+    {
+      id: 5, 
+      title: "Il regalo Airposd a cui ti sei iscritto è scaduto", 
+      status: false
+    },
+    {
+      id: 6, 
+      title: "Il regalo Airposd a cui ti sei iscritto è scaduto", 
+      status: false
+    }
+  ]
+  const messages = [
+    {
+      id: 1, 
+      name: "Giovanni Sanna", 
+      content: "", 
+      status: true
+    }, 
+    {
+      id: 2, 
+      name: "Eren Jager", 
+      content: "Ciao, volevo contattarti per il dispositivo di manovra tridimensionale Ciao, volevo contattarti per il dispositivo di manovra tridimensionale", 
+      status: false
+    }, 
+    {
+      id: 3, 
+      name: "Eren Jager", 
+      content: "Ciao, volevo contattarti per il dispositivo di manovra tridimensionale Ciao, volevo contattarti per il dispositivo di manovra tridimensionale", 
+      status: false
+    }, 
+    {
+      id: 4, 
+      name: "Eren Jager", 
+      content: "Ciao, volevo contattarti per il dispositivo di manovra tridimensionale Ciao, volevo contattarti per il dispositivo di manovra tridimensionale", 
+      status: false
+    }, 
+  ]
+  const chats = [
+    {
+      id: 1, 
+      name: "Giovanni", 
+      message: "Ciao, volevo contattarti per le airpods in regalo, sono disponibile a pagare la spedizione", 
+      status: true
+    }, 
+    {
+      id: 2, 
+      name: "Fanny", 
+      message: "Ciao, va benissimo, mi dai il tuo indirizzo, ti invio il mio pay pal", 
+      status: false
+    }, 
+    {
+      id: 3, 
+      name: "Giovanni", 
+      message: "grazie mille.", 
+      status: true
+    }
+  ]
 
   const [user, setUser] = useState({
     firstname: "", 
     lastname: "", 
+    email: "",
     location: "",
     gifts: [
       {
@@ -43,16 +186,33 @@ export default function VisitorProfile() {
         title: "", 
         description: "",
       }
+    ], 
+    myGifts: [
+      {
+        title: "", 
+        editable: false, 
+        description: "", 
+        status: false, 
+        background: false, 
+        image: ""
+      }
     ]
   })
   const [filter, setFilter] = useState("Preferiti")
   const [showMenu, setShowMenu] = useState(false)
   const [modalShow, setModalShow] = useState(false)
   const [profileOption, setProfileOption] = useState("Il tuo profilo")
-  const [progress, setProgress] = useState(75)
+  const [progress, setProgress] = useState(3)
+  const [showPoints, setShowPoints] = useState(false)
+  const [notificationOption, setNotificationOption] = useState("Notifiche")
+  const [mailBox, setMailBox] = useState({
+    id: 0, 
+    status: true, 
+    name: ""
+  })
 
   useEffect(() => {
-    axios.get('http://localhost:5000/currentUser')
+    axios.get(`${TEST_HOST}/currentUser`)
     .then((res) => {
       setUser(res.data[0])
     })
@@ -66,6 +226,23 @@ export default function VisitorProfile() {
     setModalShow(true)
   }
 
+  const displayDays = () => {
+    return days.map((day, index) => (
+      <option key={index} value="day">{day}</option>
+    ))
+  }
+
+  const displayMonths = () => {
+    return months.map((month, index) => (
+      <option key={index} value="month">{month}</option>
+    ))
+  }
+  
+  const displayYears = () => {
+    return years.map((year, index) => (
+      <option key={index} value="year">{year}</option>
+    ))
+  }
 
   return (
     <main className={styles.main}>
@@ -187,7 +364,7 @@ export default function VisitorProfile() {
       }
       {
         filter === "Profilo" && <div className={classNames('flex flex-col gap-[55px] w-[60%] max-[991px]:w-[67%] max-[991px]:gap-8', styles.product)}>
-          <div className='flex items-center justify-around rounded-[40px] bg-[#F3F3F3] mr-auto ml-auto'>
+          <div className='flex items-center justify-around rounded-[40px] bg-[#F3F3F3] mr-auto ml-auto w-[70%] max-[991px]:w-[80%] max-[768px]:w-full'>
             <ProfileOption 
               title="Il tuo profilo" 
               status={profileOption}
@@ -201,96 +378,298 @@ export default function VisitorProfile() {
           </div>
           {
             profileOption === "Il tuo profilo" && <div className='flex flex-col gap-[55px] max-[991px]:gap-8'>
-              <div className='rounded-[20px] shadow-normal py-[30px] px-20 flex items-center gap-[110px] max-[991px]:px-14 max-[991px]:gap-[60px] max-[768px]:px-10 max-[475px]:gap-[40px]'>
+              <div className='rounded-[20px] shadow-normal py-[30px] px-20 flex items-center gap-[110px] max-[991px]:px-14 max-[991px]:gap-[60px] max-[768px]:px-[20px] max-[475px]:justify-between'>
                 <div className='relative px-12 py-8 rounded-full bg-[#F3F3F3] max-[768px]:py-5 max-[768px]:px-10 max-[475px]:py-3 max-[475px]:px-5'>
                   <p className='text-[#0ACF83] text-[45px] font-bold max-[768px]:text-[35px] max-[475px]:text-[19px]'>{user.firstname[0]}</p>
                   <Image className='absolute bottom-0 right-[10px] max-[475px]:w-1/3 max-[475px]:right-0' src={UserMarkImg} alt='UserMark' />
                 </div>
                 <p className='text-[#363636] text-[50px] font-semibold max-[991px]:text-[40px] max-[475px]:text-[28px]'>{user.firstname + " " + user.lastname}</p>
               </div>
-              <div className='rounded-[20px] shadow-normal p-10 flex flex-col gap-[42px]'>
+
+              <div className='rounded-[20px] shadow-normal p-10 flex flex-col gap-[20px] max-[768px]:p-[20px]'>
                 <div>
-                  <p className='text-[30px] font-semibold'>Quanto sei Regaloso?</p>
-                  <p className='text-[18px] font-normal'>Condivi regali e ottieni recensioni positivi per aumentare il tuo livello di regalosità!</p>
+                  <p className='text-[30px] font-semibold max-[475px]:text-[24px]'>Quanto sei Regaloso?</p>
+                  <p className='text-[18px] font-normal max-[475px]:text-[16px]'>Condivi regali e ottieni recensioni positivi per aumentare il tuo livello di regalosità!</p>
                 </div>
                 <div>
+                  <div className='flex items-center justify-between mt-[42px] max-[475px]:hidden'>
+                    {
+                      stages.map((stage, index) => (
+                        <div key={index} className='relative'>
+                          <p className='text-[14px] font-normal text-[#363636]'>{stage}</p>
+                          <div className={classNames({
+                            'border-dotted border-r-2 h-[33px] border-black absolute top-[25px] z-10 opacity-20': true, 
+                            "right-0": index === stages.length - 1, 
+                            "right-1/2": stages.length !== index, 
+                          })}></div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                  <div className='h-[20px] bg-[#F3F3F3] rounded-[2000px] w-full mt-[20px]'>
+                    <div className='h-full bg-[#0ACF83] rounded-[2000px]  transiton-[width 2s ease-in-out] relative' style={{width: `${progress*25}%`}}>
+                      <div className='absolute top-[25px] right-0 flex flex-col items-end'>
+                        <div className={styles.triangle}></div>
+                        <div className='text-[18px] font-semibold text-[#0ACF83] mt-1 max-[475px]:text-[16px]'>{"Sei " + stages[progress] + "!"}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className='text-right mt-16 mb-5 max-[475px]:mb-0'>
+                  <button className='text-white bg-[#0ACF83] py-2 px-6 text-[16px] font-semibold rounded-[110px] max-[475px]:text-[16px]'>Scopri i Premi</button>
+                </div>
+              </div>
 
+              <div className={classNames({
+                "py-8 px-10 rounded-[20px] flex flex-col gap-[30px] max-[768px]:p-[20px]": true, 
+                "shadow-normal": !showPoints, 
+                "border border-[#363636]": showPoints
+              })}>
+                <div className='flex items-center justify-between'>
+                  <p className='text-[31px] font-semibold max-[475px]:text-[23px]'>Ottieni punti</p>
+                  <Image src={DromMenuArrow} alt='DropDown' onClick={() => setShowPoints(!showPoints)} />
+                </div>
+                {
+                  showPoints && <div className='mb-6'>
+                    {
+                      options.map((option) => (
+                        <div className='flex items-center justify-between border-b border-[#363636] border-opacity-20 py-5'>
+                          <p className='text-[26px] font-semibold max-[475px]:text-[20px]'>{option.title}</p>
+                          <div className='flex items-center gap-4'>
+                            <p className='text-[22px] font-light max-[475px]:text-[16px]'>{option.point + "pt"}</p>
+                            <BsCheckCircleFill color={option.status === true ? "#0ACF83" : "#F3F3F3"} size={31} className={styles.optionMark} />
+                          </div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                }
+              </div>
+
+              <div className='rounded-[20px] p-12 shadow-normal flex flex-col gap-[30px] max-[768px]:p-0 max-[768px]:shadow-none'>
+                <p className='text-[39px] font-semibold max-[475px]:text-[27px]'>I tuoi Dati</p>
+                <div className='flex flex-col gap-[15px]'>
+                  <p className='text-[22px] font-semibold'>Informazioni Pubbliche</p>
+                  <div className='border-b border-black border-opacity-20 py-3 flex gap-[30px]'>
+                    <BiSolidUserCircle color="#0ACF83" size={30} />
+                    <p className='text-[18px] font-semibold'>{user.firstname + " " + user.lastname}</p>
+                  </div>
+                  <div className='border-b border-black border-opacity-20 py-3 flex gap-[30px]'>
+                    <MdEmail color="#0ACF83" size={30} />
+                    <p className='text-[18px] font-semibold'>{user.email}</p>
+                  </div>
+                  <div className='border-b border-black border-opacity-20 py-3 flex gap-[30px]'>
+                    <FaLocationDot color="#0ACF83" size={30} />
+                    <p className='text-[18px] font-semibold'>{user.location}</p>
+                  </div>
+                </div>
+                <div className='flex flex-col gap-[15px]'>
+                  <p className='text-[22px] font-semibold'>Informazioni Personali</p>
+                  <div className='border-b border-black border-opacity-20 pt-3 pb-6 flex flex-col gap-[15px]'>
+                    <p className='text-[18px] font-semibold'>Data di nascita</p>
+                    <div className='flex items-center gap-4'>
+                      <select name="days" id="days" className='w-[100px] border border-[#363636] border-opacity-20 pl-1 text-[#363636] py-1 text-[15px] font-semibold rounded-[10px]'>
+                      {
+                        displayDays()
+                      }
+                      </select>
+                      <select name="days" id="days" className='w-[100px] border border-[#363636] border-opacity-20 pl-1 text-[#363636] py-1 text-[15px] font-semibold rounded-[10px]'>
+                      {
+                        displayMonths()
+                      }
+                      </select>
+                      <select name="days" id="days" className='w-[100px] border border-[#363636] border-opacity-20 pl-1 text-[#363636] py-1 text-[15px] font-semibold rounded-[10px]'>
+                      {
+                        displayYears()
+                      }
+                      </select>
+                    </div>
+                  </div>
+                  <div className='pt-8 pb-6 flex flex-col gap-[15px]'>
+                    <p className='text-[18px] font-semibold'>Genere</p>
+                    <div className='border border-[#363636] border-opacity-20 px-5 py-1 rounded-[10px] w-[400px]'>
+                      {
+                        sections.map((section, index) => (
+                          <div key={section.gender} className={classNames({
+                            'flex items-center justify-between py-4': true, 
+                            "border-b border-[#363636] border-opacity-20": index !== sections.length - 1
+                          })}>
+                            <p className='text-[15px] font-semibold'>{section.gender}</p>
+                            {
+                              section.status === true ? <Image src={CheckedRadio} alt="Checked" /> : <Image src={NormalRadio} alt='unChecked' />
+                            }
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className='flex gap-10'>
+                  <button className='bg-white border border-[#0ACF83] py-2.5 px-8 rounded-[10px] text-[15px] text-[#0ACF83] font-semibold'>Annulla</button>
+                  <button className='bg-[#0ACF83] py-2.5 px-8 rounded-[10px] text-[15px] text-white font-semibold'>Conferma</button>
                 </div>
               </div>
             </div>
           }
           {
-            profileOption === "Annunci" && <div>
-              this si Annunci
+            profileOption === "Annunci" && <div className='flex flex-col justify-center gap-[55px]'>
+              <div className='flex flex-col items-center justify-center w-[70%] m-auto max-[768px]:w-full'>
+                <Image src={Advertisement} alt="advertisement" className='pt-[50px] pb-[100px]' />
+                <button className='bg-[#0ACF83] rounded-[20px] px-[100px] py-[10px] flex items-center gap-10 max-[991px]:px-[80px] max-[768px]:gap-5 max-[768px]:px-[60px] max-[475px]:gap-2.5'>
+                  <BsPlusLg color="white" size={50} />
+                  <p className='text-[32px] font-semibold text-white max-[768px]:text-[28px] max-[475px]:text-[22px]'>Pubblica un regalo</p>
+                </button>
+              </div>
+              <div className='flex flex-col gap-[55px]'>
+                {
+                  user.myGifts.map((gift, i) => (
+                    <MyGiftItem 
+                      key={i}
+                      status={gift.status}
+                      img={gift.image}
+                      background={gift.background}
+                      title={gift.title}
+                      description={gift.description}
+                      editable={gift.editable}
+                    />
+                  ))
+                }
+              </div>
             </div>
           }
         </div>
       }
-      
-      {/* {modalShow &&
-        <ShippingModal title="Spedizione" onClose={() => setModalShow(false)}>
-          <div className='m-auto flex flex-col gap-12'>
-            <div className='flex items-center gap-x-[80px] gap-y-[20px] flex-wrap'>
-              <div className='flex flex-col gap-2 w-[350px]'>
-                <p className='text-22px font-semibold'>Nome</p>
-                <input type='text' placeholder='Il tuo nome' 
-                  className={classNames('border px-5 py-[5px] rounded-[10px] border-[#363636]' )}
-                />
-              </div>
-
-              <div className='flex flex-col gap-2 w-[350px]'>
-                <p className='text-22px font-semibold'>Cognome</p>
-                <input type='text' placeholder='I tuo cognome' 
-                  className={classNames('border px-5 py-[5px] rounded-[10px] border-[#363636]' )}
-                />
-              </div>
-              
-              <div className='flex flex-col gap-2 w-[350px]'>
-                <p className='text-22px font-semibold'>Nazione</p>
-                <input type='text' placeholder='Inserisci città' 
-                  className={classNames('border px-5 py-[5px] rounded-[10px] border-[#363636]' )}
-                />
-              </div>
-            </div>
-            <div className='flex items-center gap-x-[80px] gap-y-[20px] flex-wrap'>
-              <div className='flex flex-col gap-2 w-[350px]'>
-                <p className='text-22px font-semibold'>Città</p>
-                <input type='text' placeholder='Inserisci città' 
-                  className={classNames('border px-5 py-[5px] rounded-[10px] border-[#363636]' )}
-                />
-              </div>
-
-              <div className='flex items-center gap-2 justify-between w-[350px]'>
-                <div className='flex flex-col gap-2 w-[150px]'>
-                  <p className='text-22px font-semibold'>Provincia</p>
-                  <input type='text' placeholder='Provincia' 
-                    className={classNames('border px-5 py-[5px] rounded-[10px] border-[#363636]' )}
-                  />
-                </div>
-                <div className='flex flex-col gap-2 w-[150px]'>
-                  <p className='text-22px font-semibold'>Cap</p>
-                  <input type='text' placeholder='Inserisci cap' 
-                    className={classNames('border px-5 py-[5px] rounded-[10px] border-[#363636]' )}
-                  />
-                </div>
-              </div>
-              
-              <div className='flex flex-col gap-2 w-[350px]'>
-                <p className='text-22px font-semibold'>Via</p>
-                <input type='text' placeholder='Inserisci via' 
-                  className={classNames('border px-5 py-[5px] rounded-[10px] border-[#363636]' )}
-                />
-              </div>
-            </div>
-            <button 
-              className='bg-[#0ACF83] text-white text-[22px] font-semibold py-[10px] px-[63px] rounded-[20px] w-fit m-auto'
-              onClick={() => setModalShow(false)}
-            >
-              Pagamento Spedizione
-            </button>
+      {
+        filter === "Notifiche" && <div className={classNames({
+          'flex flex-col gap-[55px] w-[60%] max-[991px]:w-[67%] max-[991px]:gap-8': true, 
+          "w-[69%]": mailBox.status, 
+        }, styles.product)}>
+          <div className='flex items-center justify-around rounded-[40px] bg-[#F3F3F3] mr-auto ml-auto w-[70%] max-[991px]:w-[80%] max-[768px]:w-full'>
+            <ProfileOption 
+              title="Notifiche" 
+              status={notificationOption}
+              handleToggle={(title:string) => setNotificationOption(title)}
+            />
+            <ProfileOption
+              title="Messaggi" 
+              status={notificationOption}
+              handleToggle={(title:string) => { setNotificationOption(title); setMailBox({id: 0, status: false, name: ""}); }}
+            />
           </div>
-        </ShippingModal>
-      } */}
+          {
+            notificationOption === "Notifiche" && <div className='rounded-[20px] shadow-normal py-[68px] px-[26px] flex flex-col gap-20'>
+              <p className='text-[61px] font-semibold max-[768px]:hidden'>Notifiche</p>
+              {/* <ImCross className="hidden max-[768px]:block" /> */} 
+              <div className='flex flex-col gap-[30px]'>
+              {
+                notifications.map((notification) => (
+                  <div key={notification.id}
+                    className={classNames({
+                      'flex items-center justify-between p-5 rounded-[20px]': true, 
+                      "bg-[#F3F3F3]": notification.status, 
+                      "bg-white border border-black": !notification.status
+                    })}
+                  >
+                    <p className='text-[18px] font-normal w-4/5'>{notification.title}</p>
+                    <IoNotifications color={notification.status === true ? "#0ACF83" : "#F3F3F3"} size={35} />
+                  </div>
+                ))
+              }
+              </div>
+            </div>
+          }
+          {
+            notificationOption === "Messaggi" && mailBox.status 
+            ? <div className='flex gap-[20px] max-[991px]:flex-col'>
+                <div className='rounded-[20px] shadow-normal py-10 px-2 flex flex-col gap-[20px] w-[30%] h-fit max-[991px]:hidden'>
+                  {
+                    messages.map((message, index) => (
+                      <div key={index}
+                        className={classNames({
+                        "text-[20px] font-semibold  rounded-[10px] px-3 p-1": true, 
+                        "text-[white] bg-[#0ACF83]": index + 1 === mailBox.id, 
+                        "border-black border": index + 1 !== mailBox.id
+                      })}>{message.name}</div>
+                    ))
+                  }
+                </div>
+                <div className='hidden max-[991px]:flex max-[991px]:items-center max-[991px]:gap-8 max-[991px]:justify-center max-[991px]:items-center'>
+                  <div className='px-2 py-2 rounded-full bg-[#0ACF83]'><AiOutlineLeft size={20} color="white" /></div>
+                  <div className='text-[24px] text-[#0ACF83] font-normal'>{mailBox.name}</div>
+                </div>
+                <div className='flex flex-col gap-10 bg-[#F3F3F3] h-fit rounded-[20px] py-16 px-6 w-[70%] max-[991px]:w-full'>
+                  {
+                    chats.map((chat, index) => (
+                      <div key={chat.id}
+                        className={classNames({
+                          "flex": true, 
+                          "justify-start": chat.status, 
+                          "justify-end": !chat.status
+                        })}
+                      >
+                        <div className='w-3/5 flex items-end gap-2 max-[1503px]:w-[80%]'>
+                          {
+                            chat.status && <div className={classNames({
+                              "text-[32px] px-5 py-1 rounded-full shadow-normal": true,    
+                              "bg-[#F3F3F3] text-[#0ACF83]": chat.status, 
+                              "bg-[#0ACF83] text-[#F3F3F3]": !chat.status
+                            })}>{chat.name[0]}</div>
+                          }
+                          <div className={classNames({
+                            "py-5 px-7 rounded-t-[30px] text-[14px] font-normal mb-3 shadow-normal w-full": true, 
+                            "bg-white rounded-br-[30px]": chat.status, 
+                            "bg-[#0ACF83] text-white rounded-bl-[30px]": !chat.status
+                          })}>{chat.message}</div>
+                          {
+                            !chat.status && <div className={classNames({
+                              "text-[32px] px-5 py-1 rounded-full shadow-normal": true,    
+                              "bg-[#F3F3F3] text-[#0ACF83]": chat.status, 
+                              "bg-[#0ACF83] text-[#F3F3F3]": !chat.status
+                            })}>{chat.name[0]}</div>
+                          }
+                        </div>
+                        
+                      </div>
+                    ))
+                  }
+                  <div className='flex border border-black py-[5px] pl-[30px] pr-[8px] rounded-[30px]'>
+                    <input type='text' className='w-full bg-transparent focus:outline-none' />
+                    <div className="bg-[#0ACF83] py-3 px-3 rounded-full">
+                      <IoSend color="white" size={18} />
+                    </div>
+                  </div>
+                </div>
+            </div> 
+            : <div className='px-[26px] flex flex-col gap-10 max-[768px]:px-0'>
+              <p className='text-[61px] font-semibold max-[768px]:hidden'>Messaggi</p>
+              {/* <ImCross className="hidden max-[768px]:block" /> */} 
+              <div className='flex flex-col gap-[30px]'>
+              {
+                messages.map((message) => (
+                  <div key={message.id}
+                    className={classNames({
+                      'flex items-center justify-between p-5 rounded-[20px]': true, 
+                      "bg-[#F3F3F3]": message.status, 
+                      "bg-white border border-black": !message.status
+                    })}
+                  >
+                    <div className='flex flex-col gap-2 w-4/5'>
+                      <p className='text-[22px] font-semibold'>{message.name}</p>
+                      <p className='text-[18px] font-normal'>{message.content ? message.content.substring(0, 60) + "..." : " "}</p>
+                    </div>
+                    <IoMailUnread color={message.status === true ? "#0ACF83" : "#F3F3F3"} size={35} onClick={() => setMailBox({id: message.id, status: true, name: message.name})} />
+                  </div>
+                ))
+              }
+              </div>
+            </div>
+          }
+        </div>
+      }
+      {
+        modalShow && <Popup onCrossClick={() => setModalShow(false)} onSubmitClick={() => setModalShow(false)} />
+      }
     </main>
   )
 }

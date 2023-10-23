@@ -1,19 +1,10 @@
 .main {
   display: flex;
-  justify-content: space-between;
   max-width: 1483px;
   margin: auto;
   margin-top: 275px;
   color: #363636;
   margin-bottom: 100px;
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 16px solid #0ACF83;
 }
 
 @media only screen and (max-width: 1503px) {
@@ -35,25 +26,9 @@
     flex-direction: column;
     gap: 32px;
   }
-  .profile {
-    width: 100%;
-  }
-  .product {
-    width: 100%;
-  }
 }
 
 @media only screen and (max-width: 475px) {
-  .userMark {
-    font-size: 25px;
-    padding: 8px 18px;
-  }
-  .profile {
-    gap: 12px;
-    padding: 17px 25px 30px 25px;
-  }
-  .optionMark {
-    width: 19px;
-  }
+  
 }
 

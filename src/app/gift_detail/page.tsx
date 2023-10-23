@@ -13,6 +13,8 @@ import UserMark from '../components/userMark';
 import { FaLocationDot } from "react-icons/fa6";
 import { AiFillMessage } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
+import { TEST_HOST } from '../../app/utils/constant';
+import MultiCarousel from '../components/multipleCarousel';
 
 export default function GiftDetail() {
 
@@ -31,11 +33,11 @@ export default function GiftDetail() {
   })
 
   useEffect(() => {
-    axios.get('http://localhost:5000/gift_detail')
+    axios.get(`${TEST_HOST}/gift_detail`)
     .then((res) => {
       setGift(res.data[0])
     })
-    axios.get('http://localhost:5000/currentUser')
+    axios.get(`${TEST_HOST}/currentUser`)
     .then((res) => {
       setUser(res.data[0])
     })
@@ -114,7 +116,12 @@ export default function GiftDetail() {
           </div>
         </div>
       </main>
-      <div className='bg-[#F3F3F3] h-[330px]'></div>
+      <div className='bg-[#F3F3F3] py-20'>
+        <div className='max-w-[1483px] m-auto flex flex-col gap-16 max-[1503px]:px-[20px]'>
+          <div className='text-[44px] font-semibold'>Altri Regali</div>
+          <MultiCarousel />
+        </div>
+      </div>
     </div>
   )
 }

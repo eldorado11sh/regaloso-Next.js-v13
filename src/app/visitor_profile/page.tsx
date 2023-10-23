@@ -8,6 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { AiFillStar } from "react-icons/ai"; 
 import { AiFillMessage } from "react-icons/ai";
 import ItemWidthCard from '../components/itemWidthCard';
+import { TEST_HOST } from '../../app/utils/constant'
 
 export default function VisitorProfile() {
 
@@ -29,7 +30,7 @@ export default function VisitorProfile() {
   })
 
   useEffect(() => {
-    axios.get('http://localhost:5000/currentUser')
+    axios.get(`${TEST_HOST}/currentUser`)
     .then((res) => {
       setUser(res.data[0])
     })

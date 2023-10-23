@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  justify-content: center;
+  max-width: 1483px;
+  margin: auto;
+  margin-top: 275px;
+  color: #363636;
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1503px) {
+  .main {
+    margin-top: 235px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  
+}
+

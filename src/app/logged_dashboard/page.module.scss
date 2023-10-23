@@ -1,0 +1,85 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1483px;
+  margin: auto;
+  margin-top: 275px;
+  color: #363636;
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 600;
+  color: #0ACF83;
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  padding-left: 60px;
+}
+
+.indexMark {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  font-size: 60px;
+  padding: 24px 50px;
+  background-color: #0ACF83;
+  color: white;
+  border-radius: 100%;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 1503px) {
+  .main {
+    margin-top: 235px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main {
+    margin-top: 0px;
+  }
+  .title {
+    font-size: 44px;
+  }
+  .subtitle {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .indexMark {
+    font-size: 40px;
+    padding: 24px 40px;
+    top: -30px;
+    left: -20px;
+  }
+  .container {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .indexMark {
+    font-size: 32px;
+    padding: 10px 24px;
+    top: -30px;
+    left: -20px;
+  }
+}
+

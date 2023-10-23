@@ -30,6 +30,7 @@ const gifts = [
 
 export default function HeaderSearch() {
     const [giftOption, setGiftOption] = useState(false);
+    const [searchKeyword, setSearchKeyword] = useState("")
 
     const modalRef = useRef<HTMLDivElement | null>(null);
 
@@ -37,6 +38,7 @@ export default function HeaderSearch() {
       const handleClickOutside = (e: MouseEvent) => {
         if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
             setGiftOption(false);
+            setSearchKeyword("")
         }
       };
   
@@ -56,16 +58,16 @@ export default function HeaderSearch() {
                     <FaSearch size={25} color={"#666"} />
                 </div>
                 <div className={styles.searchInputWrapper}>
-                    <input placeholder="Ricerca il tuo regalo" />
+                    <input value={searchKeyword} placeholder="Ricerca il tuo regalo" onChange={(e) => setSearchKeyword(e.target.value)} />
                 </div>
                 <div className={styles.giftOption} onClick={() => setGiftOption(!giftOption)}>
                     <FaSlidersH size={21} color={"#363636"} />
                 </div>
             </div>
-            <div className={classNames(styles.giftOptionsWrapper, giftOption ? styles.showOption : styles.hideOption)} ref={modalRef} >
+            <div className={classNames(styles.giftOptionsWrapper, giftOption === true ? styles.showOption : styles.hideOption)} ref={modalRef} >
                 {
                     gifts.map(gift => {
-                        return <div className={styles.giftItem} key={gift.id}> 
+                        return <div className={styles.giftItem} key={gift.id} onClick={() => setSearchKeyword(gift.name)}> 
                             {
                                 gift.name
                             }

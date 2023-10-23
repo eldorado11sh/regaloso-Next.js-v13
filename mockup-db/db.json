@@ -1,4 +1,4 @@
-{
+ {
     "gifts" : [
         {
             "id": "f7095f32-f91c-413a-b181-781ed0a53712",
@@ -374,7 +374,107 @@
                     "createdAt": "2023-10-08T21:52:55.413+00:00",
                     "updateAt": "2023-10-08T21:52:55.413+00:00"
                 }
+            ], 
+            "myGifts": [
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "editable": true,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "1d427f65-e66d-46ad-bae5-006e91916d3c",
+                    "title": "Custodia airpod seconda generazione",
+                    "description": "Regalo custodia airpods perfettamente funzionante",
+                    "status": false,
+                    "favourite": true, 
+                    "image": "'../../assets/Custopia.png'",
+                    "background": false,
+                    "editable": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }, 
+                {
+                    "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+                    "title": "Cuffie Wireless",
+                    "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+                    "status": true,
+                    "favourite": false, 
+                    "image": "../../assets/CuffieWireless.png",
+                    "background": false,
+                    "editable": false,
+                    "createdAt": "2023-10-08T21:52:55.413+00:00",
+                    "updateAt": "2023-10-08T21:52:55.413+00:00"
+                }
             ]
+        }
+    ], 
+    "confirmGift": {
+        "id": "f7095f32-f91c-413a-b181-781ed0a53712",
+        "title": "Cuffie Wireless",
+        "description": "Regalo cuffie Jabra xts 5 in zona Roma, mai usate, disposto anche a spedirle",
+        "status": true,
+        "favourite": false, 
+        "image": "../../assets/CuffieWireless.png",
+        "background": false,
+        "editable": true,
+        "createdAt": "2023-10-08T21:52:55.413+00:00",
+        "updateAt": "2023-10-08T21:52:55.413+00:00"
+    }, 
+    "notifications": [
+        {
+            "id": "1", 
+            "firstname": "Giovanni", 
+            "lastname": "Sanna", 
+            "message": "Ciao sono interessato...", 
+            "messageStatus": true, 
+            "notificationStatus": false
+        }, 
+        {
+            "id": "2", 
+            "firstname": "Giovanni", 
+            "lastname": "Sanna", 
+            "message": "si è iscritto al tuo regalo", 
+            "messageStatus": false, 
+            "notificationStatus": true
+        }, 
+        {
+            "id": "3", 
+            "firstname": "Pluto", 
+            "lastname": "Libero", 
+            "message": "si è iscritto al tuo regalo", 
+            "messageStatus": false, 
+            "notificationStatus": false
+        }, 
+        {
+            "id": "4", 
+            "firstname": "Pippo", 
+            "lastname": "Baudo", 
+            "message": "si è iscritto al tuo regalo", 
+            "messageStatus": false, 
+            "notificationStatus": false
+        }, 
+        {
+            "id": "5", 
+            "firstname": "Mikasa", 
+            "lastname": "Amane", 
+            "message": "si è iscritto al tuo regalo", 
+            "messageStatus": false, 
+            "notificationStatus": false
+        }, 
+        {
+            "id": "6", 
+            "firstname": "Eren", 
+            "lastname": "Jager", 
+            "message": "Ciao ma il...", 
+            "messageStatus": false, 
+            "notificationStatus": false
         }
     ]
 }
