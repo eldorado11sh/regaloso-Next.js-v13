@@ -1,0 +1,35 @@
+.share {
+  position: relative;
+  &:hover {
+    &.top {
+      .subMenu {
+        @for $i from 1 through 5 {
+          li:nth-child(#{$i}){
+            opacity:1;
+            top:#{-$i*30}px;
+            transition-delay:#{$i*0.08}s;
+            transform:rotateY(0deg);
+          }
+        }
+      }
+    }
+  }
+}
+.subMenu {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  li {
+    transition:all ease-in-out 0.5s;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity:0;
+  }
+  @for $i from 1 through 4{
+    li:nth-child(#{$i}){
+      transform:rotateX(#{$i*45}deg);
+    }
+  }
+}

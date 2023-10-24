@@ -1,1 +1,1 @@
-export const TEST_HOST="http://localhost:5000"
+export const TEST_HOST="http://80.77.23.20:5000"

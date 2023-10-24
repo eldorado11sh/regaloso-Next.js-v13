@@ -9,6 +9,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { TEST_HOST } from "../utils/constant";
 import axios from "axios";
 import { IoMailUnread, IoNotificationsSharp} from "react-icons/io5";
+import DisplayMenu from "./sidebar";
 
 export default function Header() {
   const [auth, setAuth] = useState(true);
@@ -93,14 +94,7 @@ export default function Header() {
               <span>Regaloso</span>
             </div>
             <div className="flex">
-              <div className={styles.number}>100</div>
-              <div className={styles.bell}>
-                <FaBell />
-              </div>
-              <div className={styles.quickSearch}>
-                <FaSearch />
-              </div>
-              <button onClick={handleClick} className="flex flex-col ml-3 justify-center items-center gap-[2px]">
+              {/* <button onClick={handleClick} className="flex flex-col ml-3 justify-center items-center gap-[2px]">
                 <span className={classNames({
                   "bg-steel-500 block transition-all duration-300 ease-out h-0.5 w-[24px] rounded-sm bg-[#0ACF83]":true, 
                   "rotate-45 translate-y-1": isOpen, 
@@ -116,7 +110,8 @@ export default function Header() {
                   "-rotate-45 -translate-y-1": isOpen, 
                   "translate-y-0.5": !isOpen
                 })}></span>
-              </button>
+              </button> */}
+              <DisplayMenu />
             </div>
           </div>
         </div>

@@ -12,7 +12,6 @@ import { BiSolidUser, BiSolidUserCircle } from "react-icons/bi";
 import { IoLogOut, IoSettings, IoNotificationsSharp, IoNotifications, IoMailUnread, IoSend } from "react-icons/io5";
 import ItemWidthCard from '../components/itemWidthCard';
 import FavoriteCard from '../components/favoriteCard';
-import ShippingModal from '../components/shippingModal';
 import ProfileOption from '../components/profileOption';
 import UserMarkImg from "../../assets/userMark.png";
 import { TEST_HOST } from '../../app/utils/constant';
@@ -26,9 +25,11 @@ import Advertisement from "../../assets/ads.png"
 import MyGiftItem from '../components/myGiftItem';
 import { AiOutlineLeft } from "react-icons/ai";
 import Popup from '../components/popup';
+import { useSearchParams } from 'next/navigation'
 
 export default function VisitorProfile() {
-
+  const searchParams = useSearchParams()
+  const initialTab = searchParams.get('tab')
   const assignedCategories = ["Regali In Corso", "RegaliVinti", "Regali Scaduti"]
   const stages = ["Regalino", "Regaluccio", "Regalosetto", "Regaloso", "Regalosissimo"]
   const options = [
@@ -216,6 +217,9 @@ export default function VisitorProfile() {
     .then((res) => {
       setUser(res.data[0])
     })
+    if (initialTab) {
+      setFilter(initialTab)
+    }
   }, [])
 
   const activeTab = (tag: string) => {

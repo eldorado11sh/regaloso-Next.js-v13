@@ -3,6 +3,7 @@ import OutlineHeart from "../../assets/outlineHeart.png";
 import FillHeart from "../../assets/fillHeart.png"
 import Image from "next/image";
 import { IoShareSocialSharp } from "react-icons/io5";
+import SocialMediaButton from "./socialShareButton/socialShareButton";
 
 type Props = {
   status: boolean,
@@ -45,7 +46,8 @@ export default function ItemCard( { status, img, background, title, description,
       <div className="flex flex-col h-[200px]">
         <div className="flex items-center justify-between">
           <p className="text-2xl font-bold">{title}</p>
-          <IoShareSocialSharp className="text-black mr-4" size={28} />
+          {/* <IoShareSocialSharp className="text-black mr-4" size={28} /> */}
+          <SocialMediaButton />
         </div>
         <p className="text-lg font-light my-2.5">{description}</p>
         <button className={classNames({
