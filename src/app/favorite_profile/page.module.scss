@@ -4,7 +4,7 @@
   max-width: 1483px;
   margin: auto;
   margin-top: 275px;
-  color: #363636;
+  // color: #363636;
   margin-bottom: 100px;
 }
 
@@ -19,8 +19,7 @@
 @media only screen and (max-width: 1503px) {
   .main {
     margin-top: 235px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
   }
 }
 

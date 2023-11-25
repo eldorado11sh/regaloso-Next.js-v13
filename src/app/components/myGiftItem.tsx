@@ -17,7 +17,7 @@ type Props = {
 
 export default function MyGiftItem ({status, img, background, title, description, editable}: Props) {
   return (
-    <div className="py-10 px-9 w-full flex items-center gap-[25px] bg-white rounded-3xl relative shadow-normal max-[768px]:px-[20px]">
+    <div className="py-10 px-9 w-full flex items-center gap-[25px] bg-white dark:bg-[#2B2B2B] rounded-3xl relative shadow-normal max-[768px]:px-[20px]">
       <div className="flex items-center justify-center w-2/5 max-[475px]:hidden">
         <Image src={SmartWatch} alt="product" className={classNames({
           "": true,
@@ -29,13 +29,13 @@ export default function MyGiftItem ({status, img, background, title, description
         <div className="flex items-center justify-between relative z-10">
           <div className={classNames({
             "rounded-2xl flex py-2 px-5": true,
-            "bg-[#F3F3F3]": status,
+            "bg-[#F3F3F3] dark:bg-[#2B2B2B]": status,
             "bg-[#0ACF83]": !status
           })}>
             {
               status 
-                ? <p className="text-lg font-light">Scade tra: <span className="font-bold">02:20:35</span></p>
-                : <p className="text-lg font-bold text-white">Regalato</p>
+                ? <p className="text-lg font-light dark:text-[#F3F3F3]">Scade tra: <span className="font-bold">02:20:35</span></p>
+                : <p className="text-lg font-bold text-white dark:text-[#2B2B2B]">Regalato</p>
             }
           </div>
         </div>
@@ -57,11 +57,11 @@ export default function MyGiftItem ({status, img, background, title, description
                   <p className="text-[18px] font-semibold text-[#0ACF83]">Modifica</p>
                 </button>
                 <button className="bg-[#EB5757] rounded-[20px] py-2 px-7 flex items-center gap-3">
-                  <RiDeleteBin6Fill color="white" size={20} />
-                  <p className="text-[18px] font-semibold text-white">Rimuovi</p>
+                  <RiDeleteBin6Fill size={20} className={classNames("text-white dark:text-[#2B2B2B]")} />
+                  <p className="text-[18px] font-semibold text-white dark:text-[#2B2B2B]">Rimuovi</p>
                 </button>
             </div> 
-            : <button className="text-lg font-semibold text-white w-fit py-3 px-8 rounded-2xl mt-6 bg-[#D6D6D6]">Regalatelo!</button>
+            : <button className="text-lg font-semibold text-white dark:text-[#2B2B2B] w-fit py-3 px-8 rounded-2xl mt-6 bg-[#D6D6D6]">Regalatelo!</button>
           }
           
         </div>

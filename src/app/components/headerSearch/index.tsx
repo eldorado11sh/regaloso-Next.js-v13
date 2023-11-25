@@ -53,15 +53,15 @@ export default function HeaderSearch() {
 
     return (
         <div className={styles.headerSearchContainer}>
-            <div className={styles.headerSearchWrapper}>
+            <div className={classNames("bg-[#f3f3f3] dark:bg-[#202020]", styles.headerSearchWrapper)}>
                 <div>
-                    <FaSearch size={25} color={"#666"} />
+                    <FaSearch size={25} className="text-[#666] dark:text-[#0ACF83]"/>
                 </div>
-                <div className={styles.searchInputWrapper}>
+                <div className={classNames("", styles.searchInputWrapper)}>
                     <input value={searchKeyword} placeholder="Ricerca il tuo regalo" onChange={(e) => setSearchKeyword(e.target.value)} />
                 </div>
                 <div className={styles.giftOption} onClick={() => setGiftOption(!giftOption)}>
-                    <FaSlidersH size={21} color={"#363636"} />
+                    <FaSlidersH size={21} color={"#363636"} className="dark:hidden" />
                 </div>
             </div>
             <div className={classNames(styles.giftOptionsWrapper, giftOption === true ? styles.showOption : styles.hideOption)} ref={modalRef} >

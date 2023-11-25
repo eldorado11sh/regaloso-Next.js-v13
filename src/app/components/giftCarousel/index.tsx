@@ -7,7 +7,7 @@ import Image from "next/image";
 const GiftCarousel: NextPage = () => {
   const images =[ Product, Product, Product, Product, Product, Product, Product ]
   return (
-    <div className="shadow-normal rounded-[20px] w-1/2 max-[991px]:w-full flex flex-col justify-center relative">
+    <div className="shadow-normal rounded-[20px] w-1/2 max-[991px]:w-full flex flex-col justify-center relative dark:bg-[#2B2B2B]">
       <Carousel loop>
         {images.map((src, i) => {
           return (

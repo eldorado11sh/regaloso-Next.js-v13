@@ -7,13 +7,13 @@ import classNames from 'classnames';
 
 export default function LoggedDashboard() {
   return (
-    <main className={styles.main}>
+    <main className={classNames("text-[#363636] dark:text-[#F3F3F3]", styles.main)}>
       <div className='flex flex-col gap-8 items-center w-full'>
         <div className={styles.title}>Regaloso</div>
         <div className={styles.subtitle}>Come Funziona?</div>
         <div className={styles.container}>
 
-          <div className='relative rounded-[20px] shadow-normal py-6'>
+          <div className='relative rounded-[20px] shadow-normal py-6 dark:bg-[#2B2B2B]'>
             <div className={classNames(styles.indexMark)}>1</div>
             <div className='w-4/5 m-auto flex items-center justify-between max-[768px]:flex-col max-[768px]:py-12 max-[768px]:gap-[50px] max-[475px]:py-4 max-[475px]:w-full max-[475px]:px-5 max-[475px]:gap-0'>
               <div className='flex flex-col gap-[20px] w-1/2 max-[991px]:w-3/5 max-[768px]:w-full'>
@@ -24,7 +24,7 @@ export default function LoggedDashboard() {
             </div>
           </div>
 
-          <div className='relative rounded-[20px] shadow-normal py-6'>
+          <div className='relative rounded-[20px] shadow-normal py-6 dark:bg-[#2B2B2B]'>
             <div className={classNames(styles.indexMark)}>2</div>
             <div className='w-4/5 m-auto flex items-center justify-between max-[768px]:flex-col max-[768px]:py-12 max-[768px]:gap-[50px] max-[475px]:py-4 max-[475px]:w-full max-[475px]:px-5 max-[475px]:gap-5'>
               <div className='flex flex-col gap-[20px] w-1/2 max-[991px]:w-3/5 max-[768px]:w-full'>
@@ -35,7 +35,7 @@ export default function LoggedDashboard() {
             </div>
           </div>
 
-          <div className='relative rounded-[20px] shadow-normal py-6'>
+          <div className='relative rounded-[20px] shadow-normal py-6 dark:bg-[#2B2B2B]'>
             <div className={classNames(styles.indexMark)}>3</div>
             <div className='w-4/5 m-auto flex items-center justify-between max-[768px]:flex-col max-[768px]:py-12 max-[768px]:gap-[50px] max-[475px]:py-4 max-[475px]:w-full max-[475px]:px-5 max-[475px]:gap-0'>
               <div className='flex flex-col gap-[20px] w-3/5 max-[768px]:w-full'>

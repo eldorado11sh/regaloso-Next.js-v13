@@ -1,13 +1,11 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { RxCross1 } from "react-icons/rx";
-import Avatar from "../../assets/avatar.jpeg";
-import { TEST_HOST } from '../utils/constant';
-import axios from 'axios';
+import Avatar from "@/assets/avatar.jpeg";
+import React, { useEffect, useState } from 'react';
+import { apiService } from '@/app/_services/apiService';
 
 const menuItems = [
   {
@@ -34,8 +32,9 @@ export default function DisplayMenu() {
   })
 
   useEffect(() => {
-    axios.get(`${TEST_HOST}/currentUser`)
-    .then((res) => setUser(res.data[0]))
+    apiService.get('currentUser')
+      .then((res) => setUser(res[0]))
+      .catch((error: any) => console.error(error));
   }, [])
 
   const handleClick = () => {

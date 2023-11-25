@@ -15,7 +15,7 @@ const NextControl = (props: Props) => {
         }}
         disabled={!props.canScrollNext}
         className={classNames({
-          "text-[#0ACF83] bg-[#F3F9FB] rounded-full p-9 max-[768px]:p-6 absolute -right-12 max-[768px]:-right-9 top-1/3 max-[768px]:top-1/2 ": true,
+          "text-[#0ACF83] bg-[#F3F9FB] dark:bg-[#2B2B2B] rounded-full p-9 max-[768px]:p-6 absolute -right-12 max-[768px]:-right-9 top-1/3 max-[768px]:top-1/2 ": true,
         })}
       >
         <AiOutlineRight size={20} />

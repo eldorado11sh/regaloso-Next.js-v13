@@ -1,7 +1,6 @@
 'use client'
 import styles from './page.module.scss';
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import SelectCategory from '../components/selectCategory';
 import classNames from 'classnames';
@@ -19,14 +18,14 @@ export default function PostGiveaway() {
   }
 
   return (
-    <main className={styles.main}>
+    <main className={classNames("text-[#363636] dark:text-[#F3F3F3]", styles.main)}>
       <div className='flex flex-col items-center w-full gap-[100px] max-[768px]:gap-[60px]'>
         <div className='flex flex-col gap-[40px] items-center w-[70%] max-[768px]:w-full'>
           <div className='flex flex-col items-center gap-[18px]'>
             <p className='text-[64px] font-semibold text-center max-[991px]:text-[44px] max-[768px]:text-[32px]'>Pubblica un regalo</p>
-            <p className='text-[22px] font-light text-[#363636] max-[991px]:text-[18px] max-[768px]:text-[16px]'>Utilizza la ricerca per inserire un regalo</p>
+            <p className='text-[22px] font-light max-[991px]:text-[18px] max-[768px]:text-[16px]'>Utilizza la ricerca per inserire un regalo</p>
           </div>
-          <div className='flex w-full py-4 px-[30px] rounded-[200px] gap-[30px] bg-[#F3F3F3]'>
+          <div className='flex w-full py-4 px-[30px] rounded-[200px] gap-[30px] bg-[#F3F3F3] dark:bg-[#181717]'>
             <FaSearch size={25} color={"#666"} />
             <div className='w-full'>
               <input className='w-full bg-transparent focus:outline-none' type='text' placeholder="Inserisci il tuo regalo " />

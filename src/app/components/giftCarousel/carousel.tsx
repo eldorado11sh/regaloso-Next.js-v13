@@ -1,7 +1,6 @@
 'use client'
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import React from "react";
-import { PropsWithChildren, useEffect, useState } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import PrevControl from "./prevControl";
 import NextControl from "./nextControl";
 import Dots from "./dots";

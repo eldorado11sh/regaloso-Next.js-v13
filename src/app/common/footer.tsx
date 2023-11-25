@@ -38,7 +38,7 @@ export default function Footer() {
                         {
                             links.map((link, i) => {
                                 return <li key={i}>
-                                    <Link href={link.link}>
+                                    <Link className="dark:text-[#F3F3F3]" href={link.link}>
                                         {
                                             link.text
                                         }

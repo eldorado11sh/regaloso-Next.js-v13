@@ -3,6 +3,7 @@ import OutlineHeart from "../../assets/outlineHeart.png";
 import FillHeart from "../../assets/fillHeart.png"
 import Image from "next/image";
 import SmartWatch from "../../assets/Smartwatch.png"
+import { AiOutlineHeart } from "react-icons/ai";
 
 type Props = {
   status: boolean,
@@ -15,7 +16,7 @@ type Props = {
 
 export default function ItemWidthCard ({status, img, background, title, description, favourite}: Props) {
   return (
-    <div className="py-10 px-9 w-full flex items-center gap-[30px] bg-white rounded-3xl relative shadow-normal">
+    <div className="py-10 px-9 w-full flex items-center gap-[30px] bg-white dark:bg-[#2B2B2B] rounded-3xl relative shadow-normal">
       <div className="flex items-center justify-center w-2/5 max-[475px]:hidden">
         <Image src={SmartWatch} alt="product" className={classNames({
           "": true,
@@ -27,18 +28,18 @@ export default function ItemWidthCard ({status, img, background, title, descript
         <div className="flex items-center justify-between relative z-10">
           <div className={classNames({
             "rounded-2xl flex py-2 px-5": true,
-            "bg-[#F3F3F3]": status,
+            "bg-[#F3F3F3] dark:bg-[#2B2B2B]": status,
             "bg-[#0ACF83]": !status
           })}>
             {
               status 
-                ? <p className="text-lg font-light">Scade tra: <span className="font-bold">02:20:35</span></p>
+                ? <p className="text-lg font-light dark:text-[#F3F3F3]">Scade tra: <span className="font-bold">02:20:35</span></p>
                 : <p className="text-lg font-bold text-white">Regalato</p>
             }
           </div>
-          <div className="rounded-2xl bg-[#F3F3F3] p-3">
+          <div className="rounded-2xl bg-[#F3F3F3] dark:bg-[#2B2B2B] p-3">
             {
-              !favourite  ? <Image src={OutlineHeart} alt="OutlineHeart" /> : <Image src={FillHeart} alt="FillHeart" />
+              !favourite  ? <AiOutlineHeart size="32" className="text-black" /> : <Image src={FillHeart} alt="FillHeart" />
             }
           </div>
         </div>
@@ -50,10 +51,10 @@ export default function ItemWidthCard ({status, img, background, title, descript
           })} />
         </div>
         <div className="flex flex-col h-[200px]">
-          <p className="text-2xl font-semibold">{title}</p>
-          <p className="text-lg font-light mt-5">{description}</p>
+          <p className="text-2xl font-semibold dark:text-[#F3F3F3]">{title}</p>
+          <p className="text-lg font-light mt-5 dark:text-[#F3F3F3]">{description}</p>
           <button className={classNames({
-            "text-lg font-semibold text-white w-fit py-3 px-8 rounded-2xl mt-6": true,
+            "text-lg font-semibold text-white dark:text-[#2B2B2B] w-fit py-3 px-8 rounded-2xl mt-6": true,
             "bg-[#D6D6D6]": !status, 
             "bg-[#0ACF83]": status
           })}>Regalatelo!</button>

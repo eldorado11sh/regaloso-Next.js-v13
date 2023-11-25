@@ -13,7 +13,7 @@ const Dots = ({ itemsLength, selectedIndex }: Props) => {
         return (
           <div
             className={classNames({
-              "rounded-full transition-all duration-300 bg-white":
+              "rounded-full transition-all duration-300 bg-white dark:bg-[#2B2B2B]":
                 true,
               // tune down the opacity if slide is not selected
               "h-2 w-2": !selected,

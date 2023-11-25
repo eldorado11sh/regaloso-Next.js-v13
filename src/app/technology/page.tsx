@@ -1,7 +1,6 @@
 'use client'
 import styles from './page.module.scss';
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from 'next/image';
 import classNames from 'classnames';
 import SelectCategory from '../components/selectCategory';
@@ -26,7 +25,7 @@ export default function Technology() {
   }
 
   return (
-    <main className={styles.main}>
+    <main className={classNames("text-[#363636] dark:text-[#F3F3F3]", styles.main)}>
       <div className='flex flex-col items-center gap-[60px] max-[768px]:gap-[45px] max-[475px]:gap-[30px]'>
         <p className='text-[64px] font-semibold max-[768px]:text-[44px] max-[475px]:text-[32px]'>Tecnologia</p>
         <div className='w-[70%] flex flex-wrap items-center justify-center gap-x-4 gap-y-5 max-[768px]:w-full max-[475px]:gap-x-2 max-[475px]:gap-y-3'>
@@ -50,7 +49,7 @@ export default function Technology() {
               </div>
               <div className='overflow-x-auto'>
                 <div className='flex items-center justify-between min-w-[905px] max-[1304px]:justify-start max-[1304px]:gap-x-4'>
-                  <div className='w-[170px] h-[125px] flex items-center justify-center border border-[#363636] rounded-[10px]'>
+                  <div className='w-[170px] h-[125px] flex items-center justify-center border border-[#363636] dark:border-black rounded-[10px]'>
                     <div className='flex flex-col items-center'>
                       <AiFillCamera color="#0ACF83" size={40} />
                       <div className='text-[14px] font-semibold text-[#0ACF83]'>aggiungi foto</div>
@@ -60,24 +59,24 @@ export default function Technology() {
                     <div className='absolute -right-3 -top-[15px]'><TiDelete color="#FF525C" size={35} /></div>
                     <Image src={Custopia} alt="" className='w-[150px] h-[125px]' />
                   </div>
-                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] rounded-[10px]'>
+                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] dark:border-black rounded-[10px]'>
                     <div className='flex flex-col items-center'>
-                      <AiFillCamera color="#363636" size={40} />
+                      <AiFillCamera className="text-[#363636] dark:text-black" size={40} />
                     </div>
                   </div>
-                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] rounded-[10px]'>
+                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] dark:border-black rounded-[10px]'>
                     <div className='flex flex-col items-center'>
-                      <AiFillCamera color="#363636" size={40} />
+                      <AiFillCamera className="text-[#363636] dark:text-black" size={40} />
                     </div>
                   </div>
-                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] rounded-[10px]'>
+                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] dark:border-black rounded-[10px]'>
                     <div className='flex flex-col items-center'>
-                      <AiFillCamera color="#363636" size={40} />
+                      <AiFillCamera className="text-[#363636] dark:text-black" size={40} />
                     </div>
                   </div>
-                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] rounded-[10px]'>
+                  <div className='w-[125px] h-[125px] flex items-center justify-center border border-[#363636] dark:border-black rounded-[10px]'>
                     <div className='flex flex-col items-center'>
-                      <AiFillCamera color="#363636" size={40} />
+                      <AiFillCamera className="text-[#363636] dark:text-black" size={40} />
                     </div>
                   </div>
                 </div>
@@ -151,7 +150,7 @@ export default function Technology() {
         <button className={classNames({
           'px-[100px] py-[10px] rounded-[20px] flex items-center gap-[50px] w-fit text-[32px] max-[475px]:w-full': true, 
           'bg-[#F3F3F3] text-[#363636]': tab === "", 
-          'bg-[#0ACF83] text-white': tab !== ""
+          'bg-[#0ACF83] text-white dark:text-[#2B2B2B]': tab !== ""
         })}>
           <p>Prosegui</p>
           <FaArrowRight />

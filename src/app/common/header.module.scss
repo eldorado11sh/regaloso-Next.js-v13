@@ -10,7 +10,7 @@
     }
 
     .headerContainer {
-        background-color: #fff;
+        // background-color: #fff;
         box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
         padding: 42px 50px;
@@ -33,7 +33,7 @@
                 align-items: center;
                 gap: 20px;
                 .number {
-                    color: #fff;
+                    // color: #fff;
                     font-size: 12px;
                     line-height: 25px;
                     border-radius: 50%;
@@ -48,7 +48,7 @@
 
                 .bell {
                     border-radius: 50%;
-                    background-color: #F3F3F3;
+                    // background-color: #F3F3F3;
                     width: 40px;
                     height: 40px;
                     color: #0ACF83;
@@ -59,7 +59,7 @@
 
                 .quickSearch {
                     border-radius: 50%;
-                    background-color: #F3F3F3;
+                    // background-color: #F3F3F3;
                     width: 40px;
                     height: 40px;
                     color: #0ACF83;
@@ -79,12 +79,12 @@
 
     .headerContainer {
         .headerWrapper {
-            background-color: #fff;
+            // background-color: #fff;
             border-radius: 20px;
             padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
 
             .logo {
                 color: #0ACF83;
@@ -98,6 +98,29 @@
                 justify-content: center;
                 align-items: center;
                 margin-left: 12px;
+            }
+            .number {
+                // color: #fff;
+                font-size: 12px;
+                line-height: 25px;
+                border-radius: 50%;
+                background-color: #0ACF83;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .bell {
+                border-radius: 50%;
+                // background-color: #F3F3F3;
+                width: 40px;
+                height: 40px;
+                color: #0ACF83;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

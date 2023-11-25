@@ -27,13 +27,13 @@ export default function FavoriteCard ({ background, title, description, showShip
             "m-auto": !background
           })} />
         </div>
-        <p className="text-[24px] font-semibold text-white">Hai vinto questo Regalo!</p>
-        <p className="text-[24px] font-semibold text-white">{title}</p>
-        <p className="text-[18px] font-light text-white">{description}</p>
+        <p className="text-[24px] font-semibold text-white dark:text-[#2B2B2B]">Hai vinto questo Regalo!</p>
+        <p className="text-[24px] font-semibold text-white dark:text-[#2B2B2B]">{title}</p>
+        <p className="text-[18px] font-light text-white dark:text-[#2B2B2B]">{description}</p>
         <div className="flex items-center gap-8 mt-2">
-          <button className="rounded-2xl text-[18px] font-semibold py-3 px-8 bg-white text-[#0ACF83]">Chat</button>
+          <button className="rounded-2xl text-[18px] font-semibold py-3 px-8 bg-white dark:bg-[#2B2B2B] text-[#0ACF83]">Chat</button>
           <button 
-            className="rounded-2xl text-[18px] font-semibold py-3 px-8 bg-[#0ACF83] text-white border-white border"
+            className="rounded-2xl text-[18px] font-semibold py-3 px-8 bg-[#0ACF83] text-white dark:text-[#2B2B2B] border-white dark:border-[#2B2B2B] border"
             onClick={showShipping}
           >Spedizione</button>
         </div>

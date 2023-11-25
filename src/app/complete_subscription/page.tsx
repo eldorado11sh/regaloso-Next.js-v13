@@ -5,7 +5,7 @@ import CompleteImage from '../../assets/logged3.png'
 
 export default function CompleteSubscription() {
   return (
-    <main className={classNames('justify-center', styles.main)}>
+    <main className={classNames('justify-center text-[#363636] dark:text-[#F3F3F3]', styles.main)}>
       <div className='w-[70%] flex flex-col items-center gap-[50px] max-[768px]:w-full'>
         <div className='text-[64px] font-semibold leading-[89px] text-center max-[991px]:text-[44px] max-[768px]:leading-[70px] max-[475px]:text-[32px] max-[475px]:leading-[50px]'>
           <span className='text-[#0ACF83]'>Grazie!!</span> <br />
